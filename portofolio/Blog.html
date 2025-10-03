@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galeri Screenshot</title>
+    <link rel="stylesheet" href="Stylesheet.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <header>
+    <div class="spacer"></div> <h2>Welcome</h2> <nav>
+        <ul>
+        <li><a href="Portofolio.html">Home</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        </ul>
+        </nav>
+    </header>
+    <main>
+    <section id="blog">
+        <h1>My Blog</h1>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <img src="img/ad1.png" alt="Description of Image 1">
+                <div class="post-content">
+                    <h2>Tugas Banner</h2>
+                    <p>Hasil tugas PKWU saya yaitu membuat banner landscape menggunakan aplikasi FIGMA dengan tema UMKM.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/ad2.png" alt="Description of Image 2">
+                <div class="post-content">
+                    <h2>Tugas Banner</h2>
+                    <p>Hasil tugas PKWU saya yaitu membuat banner potrait menggunakan aplikasi FIGMA dengan tema UMKM. Di mana saya mempelajari POAC.</p>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="Img/figam1.png" alt="Description of Image 3">
+                <div class="post-content">
+                    <h2>Redesign aplikasi</h2>
+                    <p>Berikut tugas RPL saya yaitu menredesign aplikasi yang sudah ada menggunakan Figma dengan tema lingkungan. Saya menredesign aplikasi uBox (fotonya ke cut, terdapat search bar diatas).</p>
+                    <p>Terdapat home, location, dan detail uBox pada lokasi yang user pilih</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="Img/figma2.png" alt="Description of Image 4">
+                <div class="post-content">
+                    <h2>Redesign aplikasi</h2>
+                    <p>Yang ini ada bagian history dan profile. Historyy mencakup transaksi-transaksi sebelumnya. Di mana jika diklik, akan menampilkan receipt transaksi tersebut.</p>
+                    <p>Ada juga profil dan view ketika user memilih untuk mengedit profil mereka.</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="Img/it1.png" alt="Description of Image 4">
+                <div class="post-content">
+                    <h2>Materi IT</h2>
+                    <p>Terdapat lampiran materi yang saya berikan kepada peserta IT Club kelas 10, yaitu register dan login. Mencakup hal-hal sederhana seperti jenis-jenis tipe input, tag label, button dan styling yang sederhana.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/it2.png" alt="Description of Image 4">
+                <div class="post-content">
+                    <h2>Materi IT</h2>
+                    <p>Yang ini bagian Login. Siswa memasukan foto(logo google) ke dalam button dan tag span. (Memencet button "login with google" tidak berfungsi)</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/fullart.png" alt="Description of Image 4">
+                <div class="post-content">
+                    <h2>Skill art</h2>
+                    <p>Sejak kecil saya suka menggambar dan mendesign. Saya lampirkan screenshot WIP fanart saya untuk menunjukkan skill saya dalam seni juga.</p>
+                    <p>Saya menggambar fanart ini di aplikasi Krita. Saya pun familiar dengan Medibang, Ibispaint, Figma. Memiliki aplikasi-aplikasi adobe namun jarang digunakan.</p>
+                    
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="img/fanart.png" alt="Description of Image 4">
+                <div class="post-content">
+                    <h2>Skill art</h2>
+                    <p>Berikut screenshot bagian bawah karena ke-cut saat dimasukkan ke cointainer. Saya terampil dalam seni digital maupun tradisional.</p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    
+                </div>
+            </div>
+
+            </div>
+    </section>
+</main>
+    <Footer>
+        <h4>This is legalized</h4>
+    </Footer>
+<script>
+    const blogPosts = document.querySelectorAll('.blog-post');
+
+    function checkVisibility() {
+        blogPosts.forEach(post => {
+            const position = post.getBoundingClientRect();
+            const triggerPoint = window.innerHeight * 0.8; 
+
+            if (position.top < triggerPoint && position.bottom > 0) {
+                post.classList.add('is-visible');
+            }
+        });
+    }
+
+    window.addEventListener('load', checkVisibility);
+    window.addEventListener('scroll', checkVisibility);
+
+    checkVisibility(); 
+</script>
+</body>
+</html>
